@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keyboards" content="aula, bootstrap">
+  <meta name="description" content="Aula 30-09">
+  <title>Bootstrap</title>
+  <!-- CSS OWNER-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS BOOTSTRAP -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- SCRIPTS -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <section class="container">
+        <a class="navbar-brand" href="home.html"><svg width="120" height="48" viewBox="0 0 120 48" fill="none"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="120" height="48" fill="url(#pattern0)" />
+            <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_65_13" transform="translate(-0.00172414) scale(0.00172414 0.00431034)" />
+              </pattern>
+              <image id="image0_65_13" width="582" height="232"
+                xlink:href="data:image/png;base64,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" />
+            </defs>
+          </svg></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSite">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <section class="collapse navbar-collapse justify-content-end" id="navbarSite">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfólio</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+          </ul>
+        </section>
+      </section>
+    </nav>
+  </header>
+  <br />
+  <!--CONTAINER 2-->
+  <section class="container">
+    <section class="row text-center">
+      <section class="col-12 text-white">
+        <h3 class="my-4">Portfólio</h3>
+        <p>Conheça um pouco mais do nosso trabalho e identidade através dos serviços que prestamos anteriormente.</p>
+      </section>
+    </section>
+    <hr />
+    <section class="row my-3">
+      <section class="col-md-4">
+        <section class="card ">
+          <section class="card-body card-style border-card">
+            <h4 class="card-title text-center">Canarinho</h4>
+            <img src="img/projeto1.png" width="100%">
+            <h6 class="card-title text-center my-3"><i>Reposicionamento de imagem e publicidade.</i></h6>
+            <p class="card-title">Trabalho realizado para o Restaurante canarinho, no qual foi solicitado
+              que fizéssemos do zero a composição de seu logo e cores para ser vinculado em mídias de publicidade como
+              panfletos e cartões de visita. Para ser desenvolvido levamos em consideração o valor agregado da marca
+              em anos de mercado para então replicar na leveza das curvas da fonte e do passarinho canarinho juntamente
+              com a cor marcante para lembrar o sabor da comida tradicional brasileira feita com muita qualidade para
+              seus clientes.</p>
+          </section>
+        </section>
+      </section>
+
+      <section class="col-md-4">
+        <section class="card">
+          <section class="card-body card-style border-card">
+            <h4 class="card-title text-center">CHOCO</h4>
+            <img src="img/CHOCO, Key Visual.png" width="100%">
+            <h6 class="card-title text-center my-3"><i>Key Visual CHOCO™</i></h6>
+            <p class="card-text">A CHOCO™ é uma marca no mercado de confeitaria e doces
+              especializada em chocolates no Brasil que produz uma enorme gama de barras de chocolates e doces
+              diversos.<br />
+              Fizemos parceria com a CHOCO™ para produzir um Key Visual para sua nova linha de barras. Partindo da ideia
+              e do
+              layout da agência, desenvolvemos uma peça gráfica completa que exibia a identidade principal da nova linha
+              de
+              chocolates sabor menta. Desde o princípio o conceito da peça foi trazer elementos de sabor e frescor,
+              visando
+              uma comunicação que atingisse a principal característica do produto desde o primeiro contato com o
+              cliente.</p>
+          </section>
+        </section>
+      </section>
+
+      <section class="col-md-4">
+        <section class="card">
+          <section class="card-body card-style border-card">
+            <h4 class="card-title text-center">Didi & Jane</h4>
+            <img src="img/Didi Careca, Anúncio Combo.png" width="100%">
+            <h6 class="card-title text-center my-3"><i>Didi Careca e Jane, Desenvolvimento Plano de Marketing</i></h6>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Laborum perferendis sit
+              eius sed obcaecati consequuntur perspiciatis
+              ab. Dolorem expedita doloremque reiciendis
+              odio accusamus ipsa sapiente natus perferendis
+              explicabo necessitatibus! Aspernatur?</p>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <section class="row my-3">
+      <section class="col-md-4">
+        <section class="card">
+          <section class="card-body card-style border-card">
+            <h4 class="card-title text-center">Le Petit Pot</h4>
+            <img src="img/Le Petit Pot, Desenvolvimento de UI.png" width="100%">
+            <h6 class="card-title text-center my-3"><i>Le Petit Pot, Desenvolvimento de UI</i></h6>
+            <p class="card-text">A Le Petit Pot é uma empresa que produz e vende bolos de pote. Surgiu em
+              2021 após o primeiro ano da pandemia de Covid-19, visto que muitas comemorações, como casamentos e
+              aniversários (festas onde o principal aperitivo é o bolo), continuavam sendo adiadas pelo isolamento
+              social. Foi assim que a loja surgiu, com o intuito de permitir que as pessoas continuassem a comer bolos –
+              seja por motivos festivos ou não – em qualquer hora e lugar, com higiene e praticidade.<br />
+              Através da criação da identidade da marca, construímos e desenvolvemos o UI Design do aplicativo da marca,
+              que possibilitou um enorme crescimento nas vendas feitas de maneira remota dos produtos e serviços
+              oferecidos pela marca.</p>
+          </section>
+        </section>
+      </section>
+
+      <section class="col-md-4">
+        <section class="card ">
+          <section class="card-body card-style border-card">
+            <h4 class="card-title text-center">Capão Redondo</h4>
+            <img src="img/Libertários do Capão, Logo.png" width="100%">
+            <h6 class="card-title text-center my-3"><i>Libertários do Capão, Confecção do logo, identidade visual
+                e plano de marketing</i></h6>
+            <p class="card-text ">A ONG Libertários do Capão surgiu após o fim do grupo de rap liderado por
+              Rafael,
+              o cofundador da organização. O grupo cantava os problemas da sociedade e, em determinado momento da
+              carreira,
+              foram alertados da necessidade de fazer com que esses problemas fossem tratados. Então a ONG (Organização
+              Não
+              Governamental) surgiu. Há 20 anos, a Libertários ajuda a diminuir a violência no Capão Redondo, através da
+              educação,
+              oferecendo cursos profissionalizantes para que os moradores possam arrumar empregos.<br />
+              Tivemos a honra de trabalhar em uma missão desafiadora, renovar e trazer uma nova cara para a ONG que atua
+              nas periferias
+              da Zona Sul de São Paulo a mais de 20 anos. Para isso, confeccionamos um novo logo que representasse na
+              sua identidade
+              os princípios e valores defendidos com tanto orgulho para todos que contribuíram nessa dura luta durante
+              as últimas duas
+              décadas.</p>
+          </section>
+        </section>
+      </section>
+
+      <section class="col-md-4">
+        <section class="card ">
+          <section class="card-body card-style border-card">
+            <h4 class="card-title text-center"> Projeto 6 </h4>
+            <img src="img/2092644.jpg" width="100%">
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Laborum perferendis sit
+              eius sed obcaecati consequuntur perspiciatis
+              ab. Dolorem expedita doloremque reiciendis
+              odio accusamus ipsa sapiente natus perferendis
+              explicabo necessitatibus! Aspernatur?</p>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <section class="row my-3">
+      <section class="col-md-12">
+        <section class="card ">
+          <section class="card-body card-style border-card">
+            <h4 class="card-title text-center">Galeria</h4>
+            <h6 class="card-title text-center">Veja mais peças de nossos projetos.</h6>
+            <section id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <section class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/projeto1.png" alt="Canarinho" width="50%" class="d-block">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/CHOCO, Key Visual.png" alt="CHOCO" width="50%" class="d-block">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/CHOCO, Processo Criativo.png" alt="CHOCO" width="50%" class="d-block">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Didi Careca, Anúncio Combo.png" alt="Didi Careca" width="50%" class="d-block">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Didi Careca, Cardápio.png" alt="Didi Careca" width="50%" class="d-block">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Le Petit Pot, Desenvolvimento de UI.png" width="50%" alt="Le Petit Pot" class="d-block">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Le Petit Pot, Inbound Marketing.png" alt="Le Petit Pot" width="50%" class="d-block">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Libertários do Capão, Logo.png" alt="Capão" width="50%" class="d-block">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Merch (Libertários do Capão)2.png" alt="Capão" width="50%" class="d-block">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Merch (Libertários do Capão)1.png" alt="Capão" width="50%" class="d-bloc">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Merch (Libertários do Capão)2.png" alt="Capão" width="50%" class="d-block">
+                </div>
+                <a href="#carouselExampleIndicators" class="carousel-control-prev" role="button" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a href="#carouselExampleIndicators" class="carousel-control-next" role="button" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </section>
+            </section><br />
+            <hr /><br />
+            <div id="galeria">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img src="img/projeto1.png" alt="Canarinho" width="100%">
+                </div>
+                <div class="col-lg-4">
+                  <img src="img/CHOCO, Key Visual.png" alt="CHOCO" width="100%">
+                </div>
+                <div class="col-lg-4">
+                  <img src="img/CHOCO, Processo Criativo.png" alt="CHOCO" width="100%">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4">
+                  <img src="img/Didi Careca, Anúncio Combo.png" alt="Didi Careca" width="100%">
+                </div>
+                <div class="col-lg-4">
+                  <img src="img/Didi Careca, Cardápio.png" alt="Didi Careca" width="100%">
+                </div>
+                <div class="col-lg-4">
+                  <img src="img/Le Petit Pot, Desenvolvimento de UI.png" width="100%" alt="Le Petit Pot">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4">
+                  <img src="img/Le Petit Pot, Inbound Marketing.png" alt="Le Petit Pot" width="100%">
+                </div>
+                <div class="col-lg-4">
+                  <img src="img/Libertários do Capão, Logo.png" alt="Capão" width="100%">
+                </div>
+                <div class="col-lg-4">
+                  <img src="img/Merch (Libertários do Capão)2.png" alt="Capão" width="100%">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4">
+                  <img src="img/Merch (Libertários do Capão)1.png" alt="Capão" width="100%">
+                </div>
+                <div class="col-lg-4">
+                  <img src="img/Merch (Libertários do Capão)2.png" alt="Capão" width="100%">
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+  </section>
+  <footer class="rodape bg-dark navbar-fixed-bottom">
+    <section class="container">
+      <section class="row">
+        <section class="col-12">
+          <img src="img/statusco.png" alt="statusco" width="5%"><br />
+          <p>Com <u>Status Co.</u> sua ideia fica <u>ON</u></p>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-1x"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-1x"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-1x"></i></a>
+          <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp fa-1x"></i></a>
+          <a href="https://www.youtube.com/"><i class="fab fa-youtube fa-1x"></i></a>
+          <br />
+          <br />
+          <p style="font-size: 10px;">&copyFeito por Douglas Camargo, Giovanna Arcoverde e Pedro Bernardes</p>
+        </section>
+      </section>
+    </section>
+  </footer>
+</body>
+
+</html>

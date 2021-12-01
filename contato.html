@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keyboards" content="aula, bootstrap">
+  <meta name="description" content="Aula 30-09">
+  <title>Contato | Status Co.</title>
+  <!-- CSS OWNER-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS BOOTSTRAP -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- SCRIPTS -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <!-- Icone da aba -->
+  <link rel="icon" href="./img/statusco.png" type="image/icon">
+
+</head>
+
+<body class="bg-dark text-white">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <section class="container">
+        <a class="navbar-brand" href="home.html"><img src="img/statusco-horizontal.png" width="20%" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSite">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <section class="collapse navbar-collapse justify-content-end" id="navbarSite">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfólio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
+          </ul>
+        </section>
+      </section>
+    </nav>
+  </header>
+  <br />
+  <!--CONTAINER 1-->
+  <section class="container contato">
+    <section class="row text-center">
+      <section class="col-12">
+        <h3 class="my-4">Contato</h3>
+        <p>Gostaria de contratar nossos serviços?<br />Entre em contato pelo formulário abaixo.</p>
+      </section>
+    </section>
+    <section id="form-row" class="row">
+      <section class="col-4">
+        <section class="my-3">
+          <form action="http://formmail.kinghost.net/formmail.cgi" method="POST">
+            <p>Nome:
+              <input type="text" name="nome" placeholder="Insira seu nome aqui">
+            </p>
+            <p>E-mail:
+              <input type="text" name="replyto" placeholder="Insira seu nome aqui">
+            </p>
+            <p>Comentários:
+              <textarea placeholder="Escreva sua mensagem!" rows="5" maxlength="250"></textarea>
+
+            </p>
+            <section class="text-center">
+              <!-- <a class="btn btn-statusco" href="home.html" role="button">Fale Conosco</a> -->
+              <button class="w-100 mt-2 btn btn-lg btn-success btnrounded" type="submit">Enviar</button>
+            </section>
+          </form>
+        </section>
+      </section>
+    </section>
+  </section>
+  <footer class="rodape bg-dark navbar-fixed-bottom">
+    <section class="container">
+      <section class="row">
+        <section class="col-12">
+          <img src="img/statusco.png" alt="statusco" width="5%"><br />
+          <p>Com <u>Status Co.</u> sua ideia fica <u>ON</u></p>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-1x"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-1x"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-1x"></i></a>
+          <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp fa-1x"></i></a>
+          <a href="https://www.youtube.com/"><i class="fab fa-youtube fa-1x"></i></a>
+          <br />
+          <br />
+          <p style="font-size: 10px;">&copyFeito por Douglas Camargo, Giovanna Arcoverde e Pedro Bernardes</p>
+        </section>
+      </section>
+    </section>
+  </footer>
+</body>
+
+</html>

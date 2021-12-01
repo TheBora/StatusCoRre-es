@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+}
+
+body hr{
+    margin-left: 30%;
+    width: 40%;
+}
+
+.banner{
+    position:relative;
+    top: -30px;
+    height: 100%;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.secao{
+    height: 100%;
+}
+
+.navbar a{
+    margin-left: 80px;
+    display: block;
+}
+
+.active{
+    color: rgb(172, 172, 187);
+}
+
+.nav-item a:hover{
+    text-decoration: underline;
+    color: rgb(172, 172, 187);
+}
+
+
+.navbar .navbar-nav .nav-item:not(:last-child) .nav-link {
+    border-right: 2px solid #000000;
+    padding-right: 65%;
+    
+}
+
+.card{
+    height: 100%;
+    min-height: 150px;
+}
+
+.rodape {
+    padding-top: 40px;
+    text-align: center;
+    color: white;
+}
+
+.rodape a{
+    color:white;
+}
+
+.container img{
+    border-radius: 2%;
+}
+
+#sobre{
+    align-items: center;
+}
+
+.sobre img{
+    border-radius: 100%;
+}
+.sobre{
+    text-align: center;
+}
+
+.contato{
+    margin-left: 200%;
+}
+
+#form-row{
+    justify-content: center;
+}
+
+#form-row input, textarea{
+    width: 100%;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+textarea{
+    resize: none!important;
+}
+
+.carousel-control-prev-icon{
+    background-color: #505050;
+}
+.carousel-control-next-icon{
+    background-color: #505050;
+}
+
+#carouselExampleIndicators img{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#galeria img{
+    padding: 4% 2%;
+}
+/* .btn-statusco{
+    background-color: ;
+} */
+
+.btnrounded{
+    border-radius: 50px!important;
+}
+
+@media (max-width:992px) {
+    .navbar .navbar-nav .nav-item:not(:last-child) .nav-link{
+        border-right: none;
+        padding-right: 0;
+    }
+
+    a.navbar .navbar-brand{
+        width: auto;
+        display: flex;
+    }
+}
+        
